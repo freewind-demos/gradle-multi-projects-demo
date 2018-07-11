@@ -8,7 +8,7 @@ public class HelloSpec {
 
     @Test
     public void shouldSayHello() throws Exception {
-        String greeting = new Hello().hello("gradle");
+        String greeting = new HelloRoot().hello("gradle");
         assertThat(greeting).isEqualTo("Hello, gradle");
     }
 

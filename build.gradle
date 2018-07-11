@@ -1,14 +1,28 @@
-apply plugin: 'java'
+allprojects {
+    apply plugin: 'java'
 
-repositories {
-    mavenLocal()
-    jcenter()
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+
+    dependencies {
+        compile 'org.apache.commons:commons-lang3:3.4'
+        testCompile 'junit:junit:4.11'
+        testCompile 'org.easytesting:fest-assert-core:2.0M10'
+    }
 }
 
-dependencies {
-    compile 'org.apache.commons:commons-lang3:3.4'
-    testCompile 'junit:junit:4.11'
-    testCompile 'org.easytesting:fest-assert-core:2.0M10'
+subprojects {
+    dependencies {
+        compile rootProject
+    }
+}
+
+project(':project2') {
+    dependencies {
+        compile project(':project1')
+    }
 }
 
 // used to generate `./gradlew`

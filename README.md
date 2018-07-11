@@ -1,22 +1,9 @@
-Gradle Hello World Demo
+Gradle Multi Projects Demo
 =======================
 
-A very simple java project with gradle.
+Work with several sub-projects.
 
-Run tests:
+Resource
+--------
 
-```
-./gradlew test
-```
-
-Setup in IDEA
---------------
-
-Use command line:
-
-```
-idea .
-```
-
-Or import the project directly with IDEA.
-
+- <https://docs.gradle.org/current/userguide/multi_project_builds.html>
